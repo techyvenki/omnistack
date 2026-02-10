@@ -1,0 +1,177 @@
+title: TechieVenkiHub
+baseurl: ""
+#remote_theme: just-the-docs/just-the-docs
+#remote_theme: jekyll/minima
+#theme: minima
+#theme: jekyll-theme-cayman
+description         : >-
+                      Debugging with espresso ☕️, formatting with tabs ⌨️,
+                      deploying without naps 🚀
+remote_theme: yousinix/portfolYOU
+author:
+  name              : Venkatesh Duvvuri
+  image             : https://github.com/user-attachments/assets/2bd549b1-d967-4526-ad1f-908824601fcb
+  behance           : techie_venki
+  email             : techievenkatesh@gmail.com
+  facebook          : duvvuri.venkatesh
+  github            : techyvenki
+  linkedin          : techievenki
+  medium            : your_username
+  twitter           : VenkiD478529
+nav_enabled: true
+search_enabled: true
+
+# Collections
+collections:
+  projects:
+    output: true
+  elements:                                             # For Documentation Only
+    output: true                                        # For Documentation Only
+  posts:
+    output: true
+
+# Default values for collections
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "elements"
+    values:
+      layout: "element"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false
+
+### Exclude from processing ###
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
+# Theme settings
+color_scheme: light
+enable_copy_code_button: true
+
+# Enable navigation
+enable_nav_buttons: true
+
+# Enable support for callouts
+callouts:
+  note:
+    title: Note
+    color: blue
+  warning:
+    title: Warning
+    color: red
+
+# Just the Docs specific configuration
+# just_the_docs:
+#   collections:
+#     system_design:
+#       name: System Design
+#       nav_fold: true
+#     computing_models:
+#       name: Computing Models
+#       nav_fold: true
+#     cloud_services:
+#       name: Cloud Services
+#       nav_fold: true
+#     cloud_native:
+#       name: Cloud Native
+#       nav_fold: true
+#     data_ai:
+#       name: Data & AI
+#       nav_fold: true
+
+# Navigation Structure
+aux_links:
+  "GitHub":
+    - "//github.com/techyvenki/techie-venki-hub"
+
+# Navigation Order and Structure
+nav_external_links:
+  - title: Techie Venki Hub on GitHub
+    url: https://github.com/techyvenki/techie-venki-hub
+    hide_icon: false
+
+# Define the order of pages
+nav_sort: case_sensitive
+
+# Add to your existing _config.yml
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jemoji
+
+### Navbar Settings ###
+nav_exclude:                                            # The following paths are excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+  - pages/blog.html
+  - pages/blog-knowledgebase.md
+  - cloud-cost-optimization.md
+  - documentation/partials/**                           # For Documentation Only
+
+
+# Enable plugins in safe mode
+whitelist:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Footer content 
+footer_content: "Copyright &copy; 2024 Techie Venki Hub. Distributed by an <a href=\"https://github.com/techyvenki/techie-venki-hub/blob/main/LICENSE\">MIT license.</a>"
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Footer last edited timestamp
+last_edit_timestamp: true
+last_edit_time_format: "%b %e %Y at %I:%M %p"
+
+# Enable copy code button
+#enable_copy_code_button: true
+
+# Add the navigation settings
+#prev_next_buttons_location: bottom  # Can be 'bottom', 'top', or 'both'
+#prev_next_buttons_enabled: true
+
+# Main Navigation Structure
+# defaults:
+#   - scope:
+#       path: "system_design"
+#       type: system_design
+#     values:
+#       layout: default
+#       parent: System Design
+#   - scope:
+#       path: "computing_models"
+#       type: computing_models
+#     values:
+#       layout: default
+#       parent: Computing Models
+#   - scope:
+#       path: "cloud_services"
+#       type: cloud_services
+#     values:
+#       layout: default
+#       parent: Cloud Services
+#   - scope:
+#       path: "cloud_native"
+#       type: cloud_native
+#     values:
+#       layout: default
+#       parent: Cloud Native
+#   - scope:
+#       path: "data_ai"
+#       type: data_ai
+#     values:
+#       layout: default
+#       parent: Data & AI

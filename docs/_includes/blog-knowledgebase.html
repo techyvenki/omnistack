@@ -1,0 +1,635 @@
+<style>
+/* Professional Knowledge Base Styles */
+.kb-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.kb-section-title {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1a1a2e;
+  font-weight: 700;
+  font-size: 2rem;
+  position: relative;
+}
+
+.kb-section-subtitle {
+  text-align: center;
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kb-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  overflow: hidden;
+}
+
+.kb-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.kb-card-header {
+  background: linear-gradient(135deg, #2054a6 0%, #1a4280 100%);
+  color: white;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.kb-card-header i {
+  font-size: 1.5rem;
+  margin-right: 12px;
+  opacity: 0.9;
+}
+
+.kb-card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.kb-card-body {
+  padding: 20px;
+}
+
+.kb-card-description {
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.kb-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.kb-topic-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: #e8f4fd;
+  color: #2054a6;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid #cce5ff;
+}
+
+.kb-topic-tag:hover {
+  background-color: #2054a6;
+  color: white;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+.kb-topic-tag i {
+  margin-right: 5px;
+  font-size: 0.7rem;
+}
+
+.kb-link-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kb-link-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  border-left: 3px solid #2054a6;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #343a40;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.kb-link-item:hover {
+  background-color: #f8f9fa;
+  border-left-color: #0d6efd;
+  color: #0d6efd;
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+.kb-link-item i {
+  margin-right: 10px;
+  color: #2054a6;
+  width: 16px;
+  text-align: center;
+}
+
+.kb-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #2054a6 0%, #1a4280 100%);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.kb-explore-btn:hover {
+  background: linear-gradient(135deg, #1a4280 0%, #0d2d5e 100%);
+  color: white;
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+.kb-explore-btn i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.kb-explore-btn:hover i {
+  transform: translateX(3px);
+}
+
+.kb-divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #2054a6, transparent);
+  margin: 50px 0;
+  border: none;
+}
+
+.kb-highlight-box {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-top: 10px;
+}
+
+.kb-highlight-box span {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.kb-highlight-box strong {
+  color: #2054a6;
+}
+
+/* Certification Styles */
+.cert-container {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.cert-main-header {
+  background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+  color: white;
+  padding: 18px 25px;
+  display: flex;
+  align-items: center;
+}
+
+.cert-main-header i {
+  font-size: 1.5rem;
+  margin-right: 12px;
+}
+
+.cert-main-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.cert-body {
+  padding: 25px;
+}
+
+.cert-provider {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.cert-provider-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cert-provider-header img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.cert-provider-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #343a40;
+  font-weight: 600;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #343a40;
+  transition: all 0.2s ease;
+  border: 1px solid #e9ecef;
+}
+
+.cert-badge:hover {
+  background-color: #e9ecef;
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+.cert-badge i {
+  margin-right: 10px;
+  width: 18px;
+  text-align: center;
+}
+
+.cert-badge span {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+</style>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="kb-container">
+  
+  <!-- Section Header -->
+  <h1 class="kb-section-title">📚 Knowledge Areas</h1>
+  <p class="kb-section-subtitle">
+    Comprehensive guides and deep-dives into modern software architecture, cloud computing, data engineering, and emerging technologies.
+  </p>
+  
+  <!-- Row 1: System Design & Platform Engineering -->
+  <div class="row mb-4">
+    <!-- System Design -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="kb-card">
+        <div class="kb-card-header">
+          <i class="fas fa-project-diagram"></i>
+          <h3>System Design & Architecture</h3>
+        </div>
+        <div class="kb-card-body">
+          <p class="kb-card-description">
+            Master the art of designing scalable, reliable, and maintainable systems. Learn architecture patterns, distributed systems concepts, and strategies for building high-performance applications.
+          </p>
+          <div class="kb-topics">
+            <span class="kb-topic-tag"><i class="fas fa-sitemap"></i>Microservices</span>
+            <span class="kb-topic-tag"><i class="fas fa-network-wired"></i>Distributed Systems</span>
+            <span class="kb-topic-tag"><i class="fas fa-expand-arrows-alt"></i>Scalability</span>
+            <span class="kb-topic-tag"><i class="fas fa-shield-alt"></i>Resilience</span>
+          </div>
+          <div class="kb-highlight-box">
+            <span><strong>Key Focus:</strong> CAP Theorem, Load Balancing, Caching Strategies, Database Sharding</span>
+          </div>
+          <a href="{{ site.baseurl }}/2025/01/17/system-design-fundamentals.html" class="kb-explore-btn">
+            Explore System Design <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Platform Engineering -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="kb-card">
+        <div class="kb-card-header">
+          <i class="fas fa-layer-group"></i>
+          <h3>Platform Engineering</h3>
+        </div>
+        <div class="kb-card-body">
+          <p class="kb-card-description">
+            Build and manage Internal Developer Platforms (IDPs) that accelerate software delivery. Learn infrastructure automation, self-service capabilities, and developer experience optimization.
+          </p>
+          <div class="kb-topics">
+            <span class="kb-topic-tag"><i class="fas fa-cubes"></i>IDP</span>
+            <span class="kb-topic-tag"><i class="fas fa-magic"></i>Automation</span>
+            <span class="kb-topic-tag"><i class="fas fa-users"></i>Developer Experience</span>
+            <span class="kb-topic-tag"><i class="fas fa-rocket"></i>Delivery Excellence</span>
+          </div>
+          <div class="kb-highlight-box">
+            <span><strong>Key Focus:</strong> Backstage, Kubernetes Operators, Golden Paths, Self-Service Portals</span>
+          </div>
+          <a href="{{ site.baseurl }}/2025/03/07/platform-engineering.html" class="kb-explore-btn">
+            Explore Platform Engineering <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Row 2: Data & AI and Generative AI -->
+  <div class="row mb-4">
+    <!-- Data & AI -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="kb-card">
+        <div class="kb-card-header">
+          <i class="fas fa-brain"></i>
+          <h3>Data & Artificial Intelligence</h3>
+        </div>
+        <div class="kb-card-body">
+          <p class="kb-card-description">
+            Comprehensive coverage of data engineering, analytics, and machine learning. From building data pipelines to deploying ML models at scale.
+          </p>
+          <div class="kb-link-grid">
+            <a href="{{ site.baseurl }}/2025/01/17/data-ai-overview.html" class="kb-link-item">
+              <i class="fas fa-eye"></i> Data & AI Overview
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/17/data-engineering-guide.html" class="kb-link-item">
+              <i class="fas fa-database"></i> Data Engineering Fundamentals
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/17/data-analysis-mastery.html" class="kb-link-item">
+              <i class="fas fa-chart-line"></i> Data Analysis & Visualization
+            </a>
+            <a href="{{ site.baseurl }}/2025/03/08/data-ai-conventional-ml.html" class="kb-link-item">
+              <i class="fas fa-cogs"></i> Conventional Machine Learning
+            </a>
+            <a href="{{ site.baseurl }}/2025/03/08/data-ai-deep-learning.html" class="kb-link-item">
+              <i class="fas fa-network-wired"></i> Deep Learning & Neural Networks
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Generative AI -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="kb-card">
+        <div class="kb-card-header" style="background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);">
+          <i class="fas fa-robot"></i>
+          <h3>Generative AI & LLMs</h3>
+        </div>
+        <div class="kb-card-body">
+          <p class="kb-card-description">
+            Explore the cutting-edge world of Generative AI, Large Language Models, and AI-powered development. Learn prompt engineering, RAG architectures, and agentic systems.
+          </p>
+          <div class="kb-link-grid">
+            <a href="{{ site.baseurl }}/2025/01/17/prompt-engineering.html" class="kb-link-item">
+              <i class="fas fa-terminal"></i> Prompt Engineering Mastery
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/07/genai-llm-tier.html" class="kb-link-item">
+              <i class="fas fa-layer-group"></i> GenAI & LLM Architecture Tiers
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/07/retrieval-augmented-generation.html" class="kb-link-item">
+              <i class="fas fa-search-plus"></i> Retrieval Augmented Generation (RAG)
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/17/agentic-ai-systems.html" class="kb-link-item">
+              <i class="fas fa-user-astronaut"></i> Agentic AI Systems
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/07/ai-driven-software-development.html" class="kb-link-item">
+              <i class="fas fa-code"></i> AI-Powered Software Development
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Row 2.5: Generative AI Open Source Libraries -->
+  <div class="row mb-4">
+    <!-- Generative AI Open Source Libraries -->
+    <div class="col-lg-12 col-md-12 mb-4">
+      <div class="kb-card">
+        <div class="kb-card-header" style="background: linear-gradient(135deg, #e83e8c 0%, #c21872 100%);">
+          <i class="fas fa-book-open"></i>
+          <h3>Generative AI Open Source Libraries</h3>
+        </div>
+        <div class="kb-card-body">
+          <p class="kb-card-description">
+            Discover the most powerful open-source libraries and frameworks for building AI applications. From LLM orchestration to vector databases, these tools form the foundation of modern AI development.
+          </p>
+          <div class="kb-link-grid">
+            <a href="{{ site.baseurl }}/2025/01/31/mastra-ai-framework.html" class="kb-link-item">
+              <i class="fas fa-cube"></i> Mastra AI Framework
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/24/langchain-framework.html" class="kb-link-item">
+              <i class="fas fa-link"></i> LangChain Framework
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/24/langgraph.html" class="kb-link-item">
+              <i class="fas fa-project-diagram"></i> LangGraph
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/24/langsmith.html" class="kb-link-item">
+              <i class="fas fa-tools"></i> LangSmith
+            </a>
+          </div>
+          <div class="kb-highlight-box">
+            <span><strong>Key Tools:</strong> Mastra, LangChain, LangGraph, LangSmith</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Row 3: Industrial IoT and Ops Mastery -->
+  <div class="row mb-4">
+    <!-- Industrial IoT -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="kb-card">
+        <div class="kb-card-header" style="background: linear-gradient(135deg, #17a2b8 0%, #117a8b 100%);">
+          <i class="fas fa-industry"></i>
+          <h3>Industrial IoT & Edge Computing</h3>
+        </div>
+        <div class="kb-card-body">
+          <p class="kb-card-description">
+            Dive into the world of smart manufacturing, connected factories, and edge computing. Learn how to build and deploy IoT solutions for industrial environments.
+          </p>
+          <div class="kb-link-grid">
+            <a href="{{ site.baseurl }}/2025/01/17/industrial-iot-overview.html" class="kb-link-item">
+              <i class="fas fa-industry"></i> Smart Manufacturing Overview
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/17/edge-gateway-systems.html" class="kb-link-item">
+              <i class="fas fa-server"></i> Edge Gateway Architecture
+            </a>
+            <a href="{{ site.baseurl }}/2025/01/17/industry-5-revolution.html" class="kb-link-item">
+              <i class="fas fa-rocket"></i> Industry 5.0 Revolution
+            </a>
+          </div>
+          <div class="kb-highlight-box">
+            <span><strong>Technologies:</strong> MQTT, OPC-UA, Time-Series Databases, Real-time Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Ops Mastery -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="kb-card">
+        <div class="kb-card-header" style="background: linear-gradient(135deg, #fd7e14 0%, #dc6c0a 100%);">
+          <i class="fas fa-tools"></i>
+          <h3>Operations Excellence (XOps)</h3>
+        </div>
+        <div class="kb-card-body">
+          <p class="kb-card-description">
+            Master the operational disciplines that power modern software delivery. From security-first development to sustainable cloud practices.
+          </p>
+          <div class="kb-link-grid">
+            <a href="{{ site.baseurl }}/2025/03/08/dev-sec-ops.html" class="kb-link-item"><i class="fas fa-shield-alt"></i>DevSecOps</a>
+            <a href="{{ site.baseurl }}/2025/03/08/git-ops.html" class="kb-link-item"><i class="fas fa-code-branch"></i>GitOps</a>
+            <a href="{{ site.baseurl }}/2025/03/08/fin-ops.html" class="kb-link-item"><i class="fas fa-coins"></i>FinOps</a>
+            <a href="{{ site.baseurl }}/2025/03/08/ml-ops.html" class="kb-link-item"><i class="fas fa-cogs"></i>MLOps</a>
+            <a href="{{ site.baseurl }}/2025/03/08/ai-ops.html" class="kb-link-item"><i class="fas fa-robot"></i>AIOps</a>
+            <a href="{{ site.baseurl }}/2025/03/08/green-ops.html" class="kb-link-item"><i class="fas fa-leaf"></i>GreenOps</a>
+          </div>
+          <div class="kb-highlight-box">
+            <span><strong>Philosophy:</strong> Shift-left security, Infrastructure as Code, Cost optimization, Sustainable computing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <hr class="kb-divider">
+  
+  <!-- Frameworks & Platforms Section -->
+  <h1 class="kb-section-title">🛠️ Frameworks & Platforms</h1>
+  <p class="kb-section-subtitle">
+    Enterprise-grade frameworks and reference architectures for building secure, optimized, and high-performing systems.
+  </p>
+  
+  <div class="row mb-4">
+    <!-- Security & Integration -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="kb-card">
+        <div class="kb-card-header" style="background: linear-gradient(135deg, #dc3545 0%, #bd2130 100%);">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Security & Integration</h3>
+        </div>
+        <div class="kb-card-body">
+          <p class="kb-card-description">
+            Enterprise security frameworks and API integration strategies for building secure, compliant, and well-integrated systems.
+          </p>
+          <div class="kb-link-grid">
+            <a href="{{ site.baseurl }}/2025/03/08/enterprise-application-security-framework.html" class="kb-link-item">
+              <i class="fas fa-lock"></i> Enterprise Application Security Framework
+            </a>
+            <a href="{{ site.baseurl }}/2025/03/08/enterprise-api-integration-and-management-platform.html" class="kb-link-item">
+              <i class="fas fa-plug"></i> API Integration & Management Platform
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Optimization & Performance -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="kb-card">
+        <div class="kb-card-header" style="background: linear-gradient(135deg, #20c997 0%, #17a689 100%);">
+          <i class="fas fa-tachometer-alt"></i>
+          <h3>Optimization & Performance</h3>
+        </div>
+        <div class="kb-card-body">
+          <p class="kb-card-description">
+            Frameworks for optimizing cloud costs, improving development velocity, and measuring AI code assistant effectiveness.
+          </p>
+          <div class="kb-link-grid">
+            <a href="{{ site.baseurl }}/cloud-cost-optimization.html" class="kb-link-item">
+              <i class="fas fa-cloud"></i> Cloud Cost Optimization Framework
+            </a>
+            <a href="{{ site.baseurl }}/2025/03/08/ai-code-assistant-performance-scorecard.html" class="kb-link-item">
+              <i class="fas fa-chart-bar"></i> AI Code Assistant Performance Scorecard
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <hr class="kb-divider">
+  
+  <!-- Certifications Section -->
+  <h1 class="kb-section-title">🏆 Certifications</h1>
+  <p class="kb-section-subtitle">
+    Curated certification preparation guides and resources for industry-recognized cloud and data credentials.
+  </p>
+  
+  <div class="cert-container">
+    <div class="cert-main-header">
+      <i class="fas fa-award"></i>
+      <h2>Professional Certifications Guide</h2>
+    </div>
+    <div class="cert-body">
+      <div class="row">
+        <!-- Databricks -->
+        <div class="col-lg-6 col-md-6 mb-3">
+          <div class="cert-provider">
+            <div class="cert-provider-header">
+              <img src="https://www.databricks.com/favicon.ico" alt="Databricks">
+              <h4>Databricks Certifications</h4>
+            </div>
+            <a  class="cert-badge">
+              <i class="fas fa-chart-pie" style="color: #ff3621;"></i>
+              <span>Coming Soon</span>
+            </a>            
+          </div>
+        </div>
+        
+        <!-- Google Cloud -->
+        <div class="col-lg-6 col-md-6 mb-3">
+          <div class="cert-provider">
+            <div class="cert-provider-header">
+              <img src="https://www.gstatic.com/devrel-devsite/prod/v4f875a1b81b7f452d4ad95ddc2e0847267daa183c4980c794500a8a63318384d/cloud/images/favicons/onecloud/favicon.ico" alt="Google Cloud">
+              <h4>Google Cloud Certifications</h4>
+            </div>
+            <a  class="cert-badge">
+              <i class="fas fa-cloud" style="color: #4285F4;"></i>
+              <span>Coming Soon</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Azure Cloud -->
+        <div class="col-lg-6 col-md-6 mb-3">
+          <div class="cert-provider">
+            <div class="cert-provider-header">
+              <img src="https://azure.microsoft.com/favicon.ico" alt="Microsoft Azure">
+              <h4>Azure Cloud Certifications</h4>
+            </div>
+            <a href="{{ site.baseurl }}/2025/01/25/ai-102-azure-ai-engineer-study-guide.html" class="cert-badge">
+              <i class="fas fa-brain" style="color: #0078D4;"></i>
+              <span>AI-102: Azure AI Engineer Associate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
