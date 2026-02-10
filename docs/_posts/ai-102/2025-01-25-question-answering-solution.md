@@ -14,6 +14,7 @@ description: Create systems that answer user queries from your data using Azure 
 
 > 🔜 **Content Coming Soon**
 
+
 ## ➡️ Navigation
 <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
   <a href="translating-text.html" style="padding: 1rem; background: #f5f5f5; border-radius: 8px;">← Translation</a>

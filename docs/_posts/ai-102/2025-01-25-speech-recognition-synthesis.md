@@ -12,6 +12,7 @@ description: Convert speech to text, text to speech, and translate spoken langua
   <h2 style="margin: 0; color: white;">🎤 7 Lessons</h2>
 </div>
 
+
 > 🔜 **Content Coming Soon**
 
 ## ➡️ Navigation
